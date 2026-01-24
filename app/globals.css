@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #23049d;
+  --foreground: #ede9ff;
+  --card: #aa2ee6;
+  --card-foreground: #ede9ff;
+  --border: rgba(255, 223, 107, 0.3);
+  --glow: rgba(255, 121, 205, 0.4);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.glass {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px -40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(1px 1px at 15% 20%, rgba(255, 255, 255, 0.5), transparent 60%),
+    radial-gradient(1px 1px at 30% 80%, rgba(255, 255, 255, 0.4), transparent 60%),
+    radial-gradient(1px 1px at 75% 35%, rgba(255, 255, 255, 0.35), transparent 60%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255, 255, 255, 0.3), transparent 60%);
+  opacity: 0.6;
+  animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
