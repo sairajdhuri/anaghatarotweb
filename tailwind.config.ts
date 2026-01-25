@@ -9,27 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#23049D",
-        secondary: "#AA2EE6",
-        accent: "#FFDF6B",
-        highlight: "#FF79CD",
-        backgroundBase: "#23049D",
-        surface: "#AA2EE6",
-        primaryText: "#EDE9FF",
-        secondaryText: "#B9B2D8",
-        darkText: "#1F1535",
+        primary: "#6A0DAD",
+        secondary: "#B19CD9",
+        accent: "#D4AF37",
+        highlight: "#B19CD9",
+        backgroundBase: "#040A1B",
+        surface: "#6A0DAD",
+        primaryText: "#F8F9FA",
+        secondaryText: "#B19CD9",
+        darkText: "#040A1B",
       },
       backgroundImage: {
         "mystic-gradient":
-          "radial-gradient(1200px 600px at 15% -10%, rgba(170, 46, 230, 0.22), transparent 55%), radial-gradient(900px 500px at 85% 0%, rgba(255, 121, 205, 0.18), transparent 50%), linear-gradient(160deg, rgba(255, 223, 107, 0.08), transparent 40%)",
+          "radial-gradient(1200px 600px at 15% -10%, rgba(106, 13, 173, 0.22), transparent 55%), radial-gradient(900px 500px at 85% 0%, rgba(177, 156, 217, 0.18), transparent 50%), linear-gradient(160deg, rgba(212, 175, 55, 0.08), transparent 40%)",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        serif: ["var(--font-cinzel)", "Georgia", "serif"],
       },
       keyframes: {
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        shimmer: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
@@ -40,6 +45,8 @@ const config: Config = {
         "fade-up": "fade-up 600ms ease-out both",
         "fade-up-slow": "fade-up 900ms ease-out both",
         float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
