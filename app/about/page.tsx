@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div className="relative overflow-hidden">
@@ -17,6 +19,17 @@ export default function AboutPage() {
               with grounded guidance, helping seekers feel supported as they
               navigate love, career, healing, and life transitions.
             </p>
+          </div>
+          <div className="glass mx-auto w-full max-w-sm rounded-3xl p-4">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+              <Image
+                src="/tarotreader.png"
+                alt="Anagha tarot reader"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 420px"
+              />
+            </div>
           </div>
         </section>
 
@@ -60,7 +73,7 @@ export default function AboutPage() {
                 Certified Tarot Practitioner (Placeholder)
               </li>
               <li className="rounded-2xl border border-white/5 bg-white/[0.02] px-4 py-3">
-                8+ years of client sessions (Placeholder)
+                3+ years of client sessions (Placeholder)
               </li>
               <li className="rounded-2xl border border-white/5 bg-white/[0.02] px-4 py-3">
                 Vastu fundamentals training (Placeholder)

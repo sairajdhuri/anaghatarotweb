@@ -18,15 +18,15 @@ export default function Footer() {
               <Image
                 src="/logo_nobg.png"
                 alt="Anagha's Tarot Logo"
-                width={36}
-                height={36}
-                className="h-9 w-9 rounded-full object-cover"
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-full object-cover"
               />
               <div>
-                <p className="text-base font-semibold text-[var(--foreground)]">
+                <p className="text-2xl font-semibold text-[var(--foreground)]">
                   Anagha's
                 </p>
-                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+                <p className="text-base uppercase tracking-[0.3em] text-[var(--muted)]">
                   Tarot
                 </p>
               </div>

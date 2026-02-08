@@ -5,6 +5,27 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
+  const handleWhatsAppSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const inquiry = String(formData.get("inquiry") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const lines = [
+      "New inquiry from the website:",
+      name ? `Name: ${name}` : null,
+      email ? `Email: ${email}` : null,
+      inquiry ? `Inquiry: ${inquiry}` : null,
+      message ? `Message: ${message}` : null,
+    ].filter(Boolean);
+
+    const text = encodeURIComponent(lines.join("\n"));
+    const phone = "919004037537";
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+  };
+
   return (
     <div className="relative overflow-hidden">
       <div className="stars" />
@@ -41,10 +62,18 @@ export default function Home() {
 
         <section id="about" className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="glass relative rounded-3xl p-6">
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 to-transparent" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+              <Image
+                src="/tarotreader.png"
+                alt="Certified tarot reader"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 420px"
+              />
+            </div>
             <div className="mt-4 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
               <span>Certified reader</span>
-              <span>8+ years</span>
+              <span>4+ years</span>
             </div>
           </div>
           <div className="glass rounded-3xl p-8">
@@ -161,19 +190,20 @@ export default function Home() {
                 Get in touch
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-[var(--foreground)]">
-                Connect with the divine
+                Connect with the reader
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
                 Have a question before booking? Send a message and Anagha will
                 respond with availability and next steps.
               </p>
             </div>
-            <form className="grid gap-4">
+            <form className="grid gap-4" onSubmit={handleWhatsAppSubmit}>
               <div className="grid gap-2">
                 <label className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
                   Your name
                 </label>
                 <input
+                  name="name"
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]/50 transition-colors"
                   placeholder="Jane Doe"
                 />
@@ -184,6 +214,7 @@ export default function Home() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]/50 transition-colors"
                   placeholder="jane@email.com"
                 />
@@ -192,7 +223,10 @@ export default function Home() {
                 <label className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
                   Inquiry type
                 </label>
-                <select className="w-full rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)] outline-none focus:border-[var(--accent)]/50 transition-colors">
+                <select
+                  name="inquiry"
+                  className="w-full rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)] outline-none focus:border-[var(--accent)]/50 transition-colors"
+                >
                   <option className="bg-[var(--background)]">General Question</option>
                   <option className="bg-[var(--background)]">Tarot Reading</option>
                   <option className="bg-[var(--background)]">Vastu Consultation</option>
@@ -206,6 +240,7 @@ export default function Home() {
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]/50 transition-colors"
                   placeholder="How can I help you today?"
                 />
