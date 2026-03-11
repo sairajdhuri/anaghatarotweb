@@ -10,8 +10,8 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 border-t border-white/5">
-      <div className="bg-[var(--background)] text-[var(--foreground)]">
+    <footer className="relative mt-24 border-t border-[rgba(124,58,237,0.1)]">
+      <div className="bg-gradient-to-b from-[rgba(60,9,108,0.08)] to-[var(--background)] text-[var(--foreground)]">
         <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.2fr_1fr_0.8fr] lg:px-12">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/5">
+        <div className="border-t border-[rgba(124,58,237,0.1)]">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-12">
             <p>© 2026 Anagha's Tarot. All rights reserved.</p>
             <p>Designed for clarity, care, and spiritual growth.</p>

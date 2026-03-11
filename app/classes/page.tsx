@@ -2,7 +2,10 @@ export default function ClassesPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="stars" />
-      <main className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 pb-24 pt-28 sm:px-10 lg:px-12">
+      <div className="pointer-events-none fixed inset-0 z-0" style={{
+        background: 'radial-gradient(ellipse 140% 90% at 50% 30%, rgba(60, 9, 108, 0.22), transparent 65%), radial-gradient(ellipse 80% 100% at -10% 50%, rgba(60, 9, 108, 0.15), transparent 55%), radial-gradient(ellipse 80% 100% at 110% 50%, rgba(124, 58, 237, 0.12), transparent 55%), radial-gradient(ellipse 120% 60% at 50% 80%, rgba(60, 9, 108, 0.10), transparent 50%)'
+      }} />
+      <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 pb-24 pt-28 sm:px-10 lg:px-12">
         <section className="glass rounded-3xl p-8">
           <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
             Tarot Classes

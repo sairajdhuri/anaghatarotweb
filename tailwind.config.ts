@@ -18,10 +18,11 @@ const config: Config = {
         primaryText: "#F8F9FA",
         secondaryText: "#B19CD9",
         darkText: "#040A1B",
+        deepPurple: "#3c096c",
       },
       backgroundImage: {
         "mystic-gradient":
-          "radial-gradient(1200px 600px at 15% -10%, rgba(106, 13, 173, 0.22), transparent 55%), radial-gradient(900px 500px at 85% 0%, rgba(177, 156, 217, 0.18), transparent 50%), linear-gradient(160deg, rgba(212, 175, 55, 0.08), transparent 40%)",
+          "radial-gradient(1200px 600px at 15% -10%, rgba(60, 9, 108, 0.28), transparent 55%), radial-gradient(900px 500px at 85% 0%, rgba(124, 58, 237, 0.18), transparent 50%), radial-gradient(800px 400px at 50% 60%, rgba(60, 9, 108, 0.12), transparent 50%), linear-gradient(160deg, rgba(212, 175, 55, 0.06), transparent 40%)",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],

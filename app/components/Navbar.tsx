@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="border-b border-white/5 bg-[var(--background)]/80 backdrop-blur-xl">
+      <div className="border-b border-[rgba(124,58,237,0.1)] bg-gradient-to-r from-[var(--background)]/80 via-[rgba(60,9,108,0.08)] to-[var(--background)]/80 backdrop-blur-xl">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-10 lg:px-12">
           <Link
             href="/"

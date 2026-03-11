@@ -2,7 +2,10 @@ export default function ContactPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="stars" />
-      <main className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 pb-24 pt-28 sm:px-10 lg:px-12">
+      <div className="pointer-events-none fixed inset-0 z-0" style={{
+        background: 'radial-gradient(ellipse 120% 70% at 30% 20%, rgba(60, 9, 108, 0.18), transparent 55%), radial-gradient(ellipse 80% 80% at 70% 70%, rgba(124, 58, 237, 0.10), transparent 50%)'
+      }} />
+      <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 pb-24 pt-28 sm:px-10 lg:px-12">
         <section className="glass rounded-3xl p-8">
           <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
             Contact
@@ -63,11 +66,11 @@ export default function ContactPage() {
             <div className="glass rounded-3xl p-8">
               <h2 className="text-2xl font-semibold text-[var(--foreground)]">WhatsApp</h2>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                Placeholder number: +91 90000 00000
+                +91 90040 37537
               </p>
               <a
-                href="https://wa.me/919000000000"
-                className="mt-4 inline-flex rounded-full bg-[var(--purple)] px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+                href="https://wa.me/919004037537"
+                className="mt-4 inline-flex rounded-full bg-[#3c096c] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--purple)] hover:opacity-90"
               >
                 Message on WhatsApp
               </a>

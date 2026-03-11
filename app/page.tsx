@@ -31,11 +31,12 @@ export default function Home() {
       <div className="stars" />
       <main className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-32 px-6 pb-24 pt-32 sm:px-10 lg:px-12">
         <section className="relative grid gap-12 text-center pt-20 pb-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[var(--purple)]/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--accent-soft)_0%,transparent_50%)] -z-10" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#3c096c]/20 blur-[100px] rounded-full -z-10 pointer-events-none" />
+          <div className="absolute top-40 left-1/4 w-[400px] h-[300px] bg-[var(--purple)]/10 blur-[120px] rounded-full -z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(60,9,108,0.12)_0%,transparent_50%)] -z-10" />
           
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/30 bg-[var(--accent-soft)] px-6 py-2 text-xs uppercase tracking-[0.35em] text-[var(--accent)] motion-safe:animate-fade-up">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--purple)]/20 bg-[rgba(60,9,108,0.15)] px-6 py-2 text-xs uppercase tracking-[0.35em] text-[var(--accent)] motion-safe:animate-fade-up">
               Discover your destiny
             </span>
             
@@ -173,7 +174,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Whispers from the soul"
             title="Kind words from clients"
-            description="Static placeholders for now — replace with real feedback when ready."
+            description=""
             center
           />
           <div className="grid gap-6 md:grid-cols-3">
@@ -230,7 +231,7 @@ export default function Home() {
                   <option className="bg-[var(--background)]">General Question</option>
                   <option className="bg-[var(--background)]">Tarot Reading</option>
                   <option className="bg-[var(--background)]">Vastu Consultation</option>
-                  <option className="bg-[var(--background)]">Numerology</option>
+                  <option className="bg-[var(--background)]">Astrology</option>
                   <option className="bg-[var(--background)]">Tarot Classes</option>
                 </select>
               </div>
@@ -271,9 +272,9 @@ const services = [
     image: "/assets/vastu.png",
   },
   {
-    title: "Numerology",
-    body: "Decode your life path, cycles, and timing with insightful numerology.",
-    image: "/assets/num.jpg",
+    title: "Astrology",
+    body: "Decode your life path, cycles, and timing with insightful astrology.",
+    image: "/assets/astro.jpg",
   },
   {
     title: "Tarot Classes",
@@ -318,21 +319,21 @@ const classHighlights = [
 
 const testimonials = [
   {
-    name: "Aarohi",
-    body: "“Anagha’s reading felt calm and incredibly accurate. I left with clarity and peace.”",
+    name: "Ananya",
+    body: "I have been consulting Anagha for the past one year now. Her predictions have been 95% accurate. I have taken some important decisions based on her predictions and they have proved to be beneficial. She is accommodating and patient. She is also upfront about situations and doesn't sugar coat to please the client. Anagha comes across as a warm person and is truly guided by the angels.",
     service: "Tarot Reading",
     rating: 5,
   },
   {
-    name: "Rohit",
-    body: "“The session was gentle yet powerful. The guidance helped me make a confident choice.”",
-    service: "Career Clarity",
+    name: "Sakshi",
+    body: "The readings are so so so accurate. The guidance given is perfect.",
+    service: "Tarot Reading",
     rating: 5,
   },
   {
-    name: "Meera",
-    body: "“A beautiful experience — intuitive, respectful, and deeply supportive.”",
-    service: "Numerology",
+    name: "Rahul",
+    body: "Anagha Ma'am you are truly the best tarot reader with such accurate guidance and pure intuition. Every reading with you feels genuine, and I've personally experienced the truth and clarity your readings bring.",
+    service: "Tarot Reading",
     rating: 5,
   },
 ];
@@ -362,7 +363,7 @@ function SectionHeading({
       <h2 className="text-3xl font-semibold text-[var(--foreground)] sm:text-4xl">
         {title}
       </h2>
-      <div className="h-0.5 w-12 rounded-full bg-[var(--accent)]" />
+      <div className="h-0.5 w-12 rounded-full bg-gradient-to-r from-[var(--accent)] to-[#3c096c]" />
       <p className="max-w-2xl text-sm leading-relaxed text-[var(--muted)]">
         {description}
       </p>
@@ -420,7 +421,7 @@ function ServiceCard({ title, body, image }: ServiceCardProps) {
       transition={{ duration: 0.5 }}
       className="glass-card group flex h-full flex-col rounded-3xl p-1 overflow-hidden"
     >
-      <div className="h-full rounded-[20px] bg-[var(--background)]/40 p-5 backdrop-blur-md">
+      <div className="h-full rounded-[20px] bg-gradient-to-b from-[var(--accent)]/5 to-[var(--background)]/40 p-5 backdrop-blur-md">
         <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/5 relative">
           <Image
             src={image}
@@ -463,9 +464,9 @@ function TestimonialCard({ name, body, service, rating }: TestimonialCardProps) 
         ))}
       </div>
       <p className="leading-relaxed italic text-[var(--foreground)]/90 font-light text-base">"{body}"</p>
-      <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-[var(--accent)]/30 to-[var(--purple)]/30 flex items-center justify-center text-[var(--foreground)] font-serif font-bold border border-white/10">
+          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-[#3c096c]/50 to-[var(--purple)]/40 flex items-center justify-center text-[var(--foreground)] font-serif font-bold border border-[var(--purple)]/20">
              {name[0]}
           </div>
           <span className="text-[var(--accent)]">{name}</span>

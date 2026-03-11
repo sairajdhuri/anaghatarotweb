@@ -10,6 +10,8 @@
   --accent-soft: rgba(201, 162, 39, 0.15);
   --purple: #7c3aed;
   --purple-soft: rgba(124, 58, 237, 0.12);
+  --deep-purple: #3c096c;
+  --deep-purple-soft: rgba(60, 9, 108, 0.25);
 }
 
 @theme inline {
@@ -23,7 +25,11 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(60, 9, 108, 0.18), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 0% 50%, rgba(60, 9, 108, 0.10), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 100% 80%, rgba(124, 58, 237, 0.06), transparent 50%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), system-ui, sans-serif;
   min-height: 100vh;
@@ -49,13 +55,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: var(--deep-purple);
 }
 
 /* Glass Effects */
 .glass {
-  background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(
+    135deg,
+    rgba(60, 9, 108, 0.08) 0%,
+    var(--card) 50%,
+    rgba(124, 58, 237, 0.04) 100%
+  );
+  border: 1px solid rgba(124, 58, 237, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -63,10 +74,11 @@ h1, h2, h3, h4, h5, h6 {
 .glass-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.01) 100%
+    rgba(60, 9, 108, 0.10) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(124, 58, 237, 0.05) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 58, 237, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -74,8 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(201, 162, 39, 0.2);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+  border-color: rgba(201, 162, 39, 0.35);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(201, 162, 39, 0.25);
 }
 
 /* Text Styles */
@@ -112,13 +124,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Backgrounds */
 .bg-deep-mystic {
-  background: radial-gradient(ellipse at 50% 0%, var(--purple-soft), transparent 60%),
+  background: radial-gradient(ellipse at 50% 0%, var(--deep-purple-soft), transparent 50%),
+              radial-gradient(ellipse at 80% 30%, var(--purple-soft), transparent 50%),
+              radial-gradient(ellipse at 20% 70%, rgba(60, 9, 108, 0.12), transparent 50%),
               var(--background);
 }
 
 .border-gradient-gold {
   background: linear-gradient(var(--background), var(--background)) padding-box,
-              linear-gradient(135deg, var(--accent-soft), var(--purple-soft)) border-box;
+              linear-gradient(135deg, var(--accent-soft), var(--deep-purple-soft), var(--purple-soft)) border-box;
   border: 1px solid transparent;
   border-radius: 1.5rem;
 }

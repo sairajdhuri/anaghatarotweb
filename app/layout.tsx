@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Anagha's Tarot",
   },
   description:
-    "Anagha's Tarot offers mystical tarot readings, vastu consultation, numerology insights, and tarot classes. Get spiritual guidance, clarity, healing, and learning from an experienced tarot reader in India.",
+    "Anagha's Tarot offers mystical tarot readings, vastu consultation, astrology insights, and tarot classes. Get spiritual guidance, clarity, healing, and learning from an experienced tarot reader in India.",
   keywords: [
     "Anagha's Tarot",
     "Anagha tarot",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "tarot reader",
     "online tarot reading",
     "vastu consultation",
-    "numerology",
+    "astrology",
     "tarot classes India",
     "learn tarot",
     "spiritual guidance",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anagha's Tarot | Tarot Reader & Spiritual Guide in India",
     description:
-      "Mystical tarot readings, vastu consultation, numerology insights, and tarot classes by Anagha. Your trusted spiritual guide in India.",
+      "Mystical tarot readings, vastu consultation, astrology insights, and tarot classes by Anagha. Your trusted spiritual guide in India.",
     url: "https://anaghatarot.in",
     siteName: "Anagha's Tarot",
     locale: "en_IN",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anagha's Tarot | Tarot Reader & Spiritual Guide",
     description:
-      "Mystical tarot readings, vastu consultation, numerology insights, and tarot classes by Anagha.",
+      "Mystical tarot readings, vastu consultation, astrology insights, and tarot classes by Anagha.",
     creator: "@anaghatarot",
   },
   verification: {
