@@ -36,7 +36,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(60,9,108,0.12)_0%,transparent_50%)] -z-10" />
           
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--purple)]/20 bg-[rgba(60,9,108,0.15)] px-6 py-2 text-xs uppercase tracking-[0.35em] text-[var(--accent)] motion-safe:animate-fade-up">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/30 bg-white/[0.03] px-8 py-3 text-xs uppercase tracking-[0.35em] text-[var(--accent)] motion-safe:animate-fade-up">
               Discover your destiny
             </span>
             
