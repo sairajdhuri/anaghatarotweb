@@ -8,13 +8,13 @@ export default function ClassesPage() {
       <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 pb-24 pt-28 sm:px-10 lg:px-12">
         <section className="glass rounded-3xl p-8">
           <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
-            Tarot Classes
+            Ana's Academy
           </p>
           <h1 className="mt-4 text-4xl font-semibold text-[var(--foreground)] sm:text-5xl">
-            Learn tarot with clarity, intuition, and structure
+            Learn tarot, vedic astrology and crystal therapy
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
-            Anagha's tarot classes blend symbolism, practical spreads, and
+            Ana's Academy classes blend symbolism, practical spreads, and
             intuitive development. Whether you are beginning your journey or
             deepening your practice, you will learn to read with confidence and
             integrity.

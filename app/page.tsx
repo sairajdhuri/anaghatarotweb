@@ -41,7 +41,7 @@ export default function Home() {
             </span>
             
             <h1 className="text-5xl font-bold leading-tight motion-safe:animate-fade-up sm:text-6xl lg:text-7xl [animation-delay:120ms] font-serif">
-              <span className="text-[var(--foreground)]">Unlock the secrets of your path with </span>
+              <span className="text-[var(--foreground)]">Unlock the secrets of your life's path with </span>
               <span className="text-gold-gradient block mt-2">Anagha's Tarot Guidance</span>
             </h1>
             
@@ -65,16 +65,15 @@ export default function Home() {
           <div className="glass relative rounded-3xl p-6">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
               <Image
-                src="/tarotreader.png"
+                src="/anagha.jpeg"
                 alt="Certified tarot reader"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 420px"
               />
             </div>
-            <div className="mt-4 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+            <div className="mt-4 flex items-center justify-center text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
               <span>Certified reader</span>
-              <span>4+ years</span>
             </div>
           </div>
           <div className="glass rounded-3xl p-8">
@@ -159,9 +158,9 @@ export default function Home() {
 
         <section id="classes" className="grid gap-10">
           <SectionHeading
-            eyebrow="Tarot Classes"
-            title="Learn tarot with structure and intuition"
-            description="Small-group classes that build confidence from foundations to advanced readings."
+            eyebrow="Ana's Academy"
+            title="Learn Tarot, Vedic Astrology, and Crystal Therapy"
+            description="Comprehensive classes that build confidence from foundations to advanced practice. One-on-one sessions available."
           />
           <div className="grid gap-4 md:grid-cols-2">
             {classHighlights.map((item) => (
@@ -232,7 +231,7 @@ export default function Home() {
                   <option className="bg-[var(--background)]">Tarot Reading</option>
                   <option className="bg-[var(--background)]">Vastu Consultation</option>
                   <option className="bg-[var(--background)]">Astrology</option>
-                  <option className="bg-[var(--background)]">Tarot Classes</option>
+                  <option className="bg-[var(--background)]">Ana's Academy</option>
                 </select>
               </div>
               <div className="grid gap-2">
@@ -277,8 +276,8 @@ const services = [
     image: "/assets/astro.jpg",
   },
   {
-    title: "Tarot Classes",
-    body: "Structured learning from foundations to intuitive reading practice.",
+    title: "Ana's Academy",
+    body: "Structured learning in tarot, vedic astrology and crystal therapy. One-on-one sessions available.",
     image: "/assets/class.png",
   },
 ];
@@ -312,8 +311,8 @@ const classHighlights = [
     body: "Interactive sessions with feedback to strengthen reading flow.",
   },
   {
-    title: "Ethical reading",
-    body: "Clear boundaries, consent, and compassionate guidance in every reading.",
+    title: "Personalized Learning",
+    body: "One-on-one sessions available for tailored guidance and deep dives.",
   },
 ];
 

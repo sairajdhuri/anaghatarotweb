@@ -4,7 +4,7 @@ import { Instagram } from "lucide-react";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Anagha", href: "/about" },
-  { label: "Tarot Classes", href: "/classes" },
+  { label: "Ana's Academy", href: "/classes" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -24,10 +24,10 @@ export default function Footer() {
               />
               <div>
                 <p className="text-2xl font-semibold text-[var(--foreground)]">
-                  Anagha's
+                  Ana's
                 </p>
                 <p className="text-base uppercase tracking-[0.3em] text-[var(--muted)]">
-                  Tarot
+                  Academy
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-[rgba(124,58,237,0.1)]">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-12">
-            <p>© 2026 Anagha's Tarot. All rights reserved.</p>
+            <p>© 2026 Ana's Academy. All rights reserved.</p>
             <p>Designed for clarity, care, and spiritual growth.</p>
           </div>
         </div>

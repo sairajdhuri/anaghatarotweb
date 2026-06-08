@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About Anagha", href: "/about" },
-  { label: "Tarot Classes", href: "/classes" },
+  { label: "Ana's Academy", href: "/classes" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -32,10 +32,10 @@ export default function Navbar() {
               className="h-20 w-20 rounded-full object-cover"
             />
             <span className="text-2xl font-semibold tracking-wide">
-              Anagha's
+              Ana's
             </span>
             <span className="text-base uppercase tracking-[0.3em] text-[var(--muted)] group-hover:text-[var(--foreground)] transition">
-              Tarot
+              Academy
             </span>
           </Link>
 
